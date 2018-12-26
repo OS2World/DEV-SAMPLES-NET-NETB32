@@ -1,0 +1,29 @@
+# IBM Developer's Workframe/2 Make File Creation run at 09:47:18 on 02/27/93
+
+# Make File Creation run in directory:
+#   E:\NETB32;
+
+.SUFFIXES:
+
+.SUFFIXES: .c
+
+test.exe:  \
+  NETBVIEW.OBJ \
+  TEST.OBJ \
+  MAKEFILE
+   @REM @<<TEST.@0
+     /CO /M:FULL /NOL /PM:VIO +
+     NETBVIEW.OBJ +
+     TEST.OBJ
+     test.exe
+     
+     
+     ;
+<<
+   LINK386.EXE @TEST.@0
+
+{.}.c.obj:
+   ICC.EXE /I. /DE32TO16 /Sm /Ss /Q /Kb /Ti /C .\$*.c
+
+!include MAKEFILE.DEP
+

@@ -1,0 +1,41 @@
+# IBM Developer's Workframe/2 Make File Creation run at 09:47:18 on 02/27/93
+
+# Make File Creation run in directory:
+#   E:\NETB32;
+
+# Assumed INCLUDE environment variable path:
+#   c:\ibmcom\include;
+#   I:\TOOLKT20\C\OS2H;
+#   I:\TOOLKT20\ASM\OS2INC;
+#   F:\IBMC\INCLUDE;
+#   H:\TOOLKT20\C\OS2H;
+#   H:\TOOLKT20\ASM\OS2INC;
+#   c:\cmlib;
+#   H:\TCPIP\INCLUDE;
+
+
+NETBVIEW.OBJ:  NETBVIEW.C  \
+#  {.;$(INCLUDE);}os2.h  \
+#  {.;$(INCLUDE);}stdio.h  \
+#  {.;$(INCLUDE);}stdlib.h  \
+#  {.;$(INCLUDE);}malloc.h  \
+#  {.;$(INCLUDE);}string.h  \
+#  {.;$(INCLUDE);}dos.h  \
+   {.;.;$(INCLUDE);}netbview.h  \
+#    {.;$(INCLUDE);}lan_7_c.h  \
+#    {.;$(INCLUDE);}netb_1_c.h  \
+#    {.;$(INCLUDE);}netb_2_c.h  \
+#    {.;$(INCLUDE);}netb_4_c.h  \
+   MAKEFILE
+
+TEST.OBJ:  TEST.C  \
+#  {.;$(INCLUDE);}os2.h  \
+   {.;$(INCLUDE);}netbview.h  \
+#    {.;$(INCLUDE);}lan_7_c.h  \
+#    {.;$(INCLUDE);}netb_1_c.h  \
+#    {.;$(INCLUDE);}netb_2_c.h  \
+#    {.;$(INCLUDE);}netb_4_c.h  \
+#  {.;$(INCLUDE);}stdio.h  \
+#  {.;$(INCLUDE);}stdlib.h  \
+#  {.;$(INCLUDE);}string.h  \
+   MAKEFILE
